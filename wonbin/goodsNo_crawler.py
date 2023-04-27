@@ -13,7 +13,7 @@ skincare_dict = {
 }
 
 
-def bring_brand_items_dict():
+def bring_goodsNo():
     global skincare_dict
     brand_list = ['닥터지', '라운드랩', '라네즈', '아이소이', '아누아', '에스트라'] 
     brand_subcat_item_dict = { # 정보를 담아줄 dictionary ==> 나중에 json파일로 저장
@@ -66,12 +66,12 @@ def bring_brand_items_dict():
                     time.sleep(0.3) # 혹시나 블락을 당할 경우를 고려하여 time.sleep()을 줍니다.
           
     # json 파일로 저장해주기 
-    file_path = "./brand_subcat_item_dict.json"
+    file_path = "./goodsNo_dict.json"
     with open(file_path, 'w', encoding='utf-8-sig') as file:
         json.dump(brand_subcat_item_dict, file, indent='\t')
 
     return 
 
 if __name__ == '__main__':
-    bring_brand_items_dict()
+    bring_goodsNo()
 
